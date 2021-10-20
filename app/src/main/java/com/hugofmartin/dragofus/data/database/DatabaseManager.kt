@@ -4,6 +4,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.hugofmartin.dragofus.common.Constants
+import com.hugofmartin.dragofus.data.database.dao.AchievementDao
+import com.hugofmartin.dragofus.data.database.dao.CouplingDao
+import com.hugofmartin.dragofus.data.database.dao.DragodindeDao
 import com.hugofmartin.dragofus.data.entity.Achievement
 import com.hugofmartin.dragofus.data.entity.Coupling
 import com.hugofmartin.dragofus.data.entity.Dragodinde
@@ -11,6 +14,9 @@ import com.hugofmartin.dragofus.ui.DragoFusApplication
 
 @Database(entities = [Dragodinde::class, Coupling::class, Achievement::class], exportSchema = false, version = 1)
 abstract class MyDragoFusDatabase : RoomDatabase() {
+    abstract val dragodindeDao: DragodindeDao
+    abstract val couplingDao: CouplingDao
+    abstract val achievementsDao: AchievementDao
 }
 
 class DatabaseManagerImpl(override val database: MyDragoFusDatabase) : DatabaseManager

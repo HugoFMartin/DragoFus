@@ -6,7 +6,6 @@ import com.hugofmartin.dragofus.data.entity.Dragodinde
 import kotlinx.coroutines.flow.Flow
 
 interface DragodindeRepository {
-
     val allDragodindes: Flow<List<Dragodinde>>
     suspend fun addDragodinde(dragodinde: Dragodinde)
     suspend fun makeUnFertile(dragodindeId: Int)

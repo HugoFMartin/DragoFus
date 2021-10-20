@@ -10,12 +10,10 @@ interface CouplingDao {
     @Query("SELECT * FROM coupling")
     fun getCouplings(): List<Coupling>
 
-    @Query("SELECT * FROM coupling WHERE finished = 1")
-    fun getFinishedCouplings(): List<Coupling>
+    @Insert
+    fun insert(entities: Coupling): Long
 
     @Query("UPDATE coupling SET finished= 1 WHERE id= :couplingId")
     fun makeCouplingFinished(couplingId: Int)
 
-    @Insert
-    fun insert(entities: Coupling): Long
 }

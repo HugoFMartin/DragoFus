@@ -41,5 +41,4 @@ class AchievementRepositoryImpl(
     override suspend fun createAchievement(achievement: Achievement) {
         achievementDao.insert(achievement)
     }
-
 }

@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class AchievementViewModel(
     private val achievementRepository: AchievementRepository
-): ViewModel() {
+) : ViewModel() {
 
     val appAchievement = achievementRepository.appAchievement.asLiveData()
 

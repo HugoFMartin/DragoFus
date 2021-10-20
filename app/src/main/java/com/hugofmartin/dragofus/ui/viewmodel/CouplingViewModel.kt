@@ -11,11 +11,11 @@ import kotlinx.coroutines.launch
 
 class CouplingViewModel(
     private val couplingRepository: CouplingRepository
-): ViewModel() {
+) : ViewModel() {
 
     var coupling = couplingRepository.allCouplings.asLiveData()
 
-    fun addCoupling(coupling: Coupling){
+    fun addCoupling(coupling: Coupling) {
         viewModelScope.launch {
             couplingRepository.addCoupling(coupling)
         }

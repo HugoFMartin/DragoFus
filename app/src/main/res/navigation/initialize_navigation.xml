@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/initialize_navigation"
-    app:startDestination="@id/initializeHomeFragment">
+    app:startDestination="@id/initializeSetupFragment">
 
     <fragment
         android:id="@+id/initializeHomeFragment"

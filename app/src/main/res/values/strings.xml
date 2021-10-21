@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">DragoFus</string>
+
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="validate">Valider</string>
+
+    <!-- Initialize screen -->
+        <!-- Initializing home fragment -->
+        <string name="initializing_home_title">Bienvenue !</string>
+        <string name="initializing_home_content">
+            My Dragofus est l\'application mobile qui te permet de gérer tes montures, réaliser et voir tes accouplements ainsi que l\'évolution
+            de tes succès élevages du MMORP Dofus !
+        </string>
+        <string name="initializing_home_subcontent">
+            Afin de paramétrer l\'application, as tu déjà commencé les succès d\'élevage sur le jeu ?
+        </string>
+
+        <!-- Initializing setup fragment -->
+        <string name="initializing_title">Mise à jours des succès</string>
+        <string name="initializing_birth">Nombre de naissances : </string>
+        <string name="initializing_content">Renseignez votre avancement sur les succès d\'élevage !</string>
+        <string name="initializing_coupling">Nombre d\'accouplements : </string>
+
 </resources>

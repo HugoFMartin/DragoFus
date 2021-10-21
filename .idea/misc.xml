@@ -5,8 +5,8 @@
       <map>
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/activity_initialize.xml" value="0.20520833333333333" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_end_fragment.xml" value="0.20520833333333333" />
-        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_home_fragment.xml" value="0.20520833333333333" />
-        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_setup_fragment.xml" value="0.20520833333333333" />
+        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_home_fragment.xml" value="0.25" />
+        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_setup_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -1,68 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background=""
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/home_initializing_title_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        style="@style/titleFragment"
+        style="@style/title_fragment"
         android:text="@string/initializing_home_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:id="@+id/cardView"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/go_to_initializing_setup_button"
+        android:layout_margin="48dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/home_initializing_imageView"
         app:layout_constraintTop_toBottomOf="@+id/home_initializing_title_textView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/secondary"
+            android:padding="18dp"
             app:layout_constraintBottom_toTopOf="@+id/validate_initializing_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_initializing_textView">
 
+            <TextView
+                android:id="@+id/home_initializing_card_title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/initializing_home_card_title"
+                android:textAlignment="center"
+                android:textColor="@color/primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/home_initializing_content_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/initializing_home_content"
-                android:textAlignment="center"
-                android:textColor="@color/purple_700"
+                android:layout_marginTop="20dp"
+                android:text="@string/initializing_home_card_content"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/home_initializing_subcontent_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="@string/initializing_home_subcontent"
-                android:textAlignment="center"
-                android:textColor="@color/purple_700"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/home_initializing_content_textView" />
+                app:layout_constraintTop_toBottomOf="@+id/home_initializing_card_title_textView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/home_initializing_imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_initializing_subcontent_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/dragodindes_doree" />
+
+    <TextView
+        android:id="@+id/home_initializing_subcontent_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/initializing_home_subcontent"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_initializing_setup_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/go_to_initializing_setup_button"

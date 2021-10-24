@@ -7,19 +7,28 @@
 
     <!-- Initialize screen -->
         <!-- Initializing home fragment -->
-        <string name="initializing_home_title">Bienvenue !</string>
-        <string name="initializing_home_content">
-            My Dragofus est l\'application mobile qui te permet de gérer tes montures, réaliser et voir tes accouplements ainsi que l\'évolution
-            de tes succès élevages du MMORP Dofus !
+        <string name="initializing_home_title">DragoFus</string>
+        <string name="initializing_home_card_title">Bienvenue !</string>
+        <string name="initializing_home_card_content">
+            L\'application qui permet de<br/>
+            &#8226; gérer des montures<br/>
+            &#8226; réaliser et voir des accouplements<br/>
+            &#8226; et l\'évolution des succès élevage<br/>
+            du MMORPG Dofus !
         </string>
         <string name="initializing_home_subcontent">
             Afin de paramétrer l\'application, as tu déjà commencé les succès d\'élevage sur le jeu ?
         </string>
 
         <!-- Initializing setup fragment -->
-        <string name="initializing_title">Mise à jours des succès</string>
-        <string name="initializing_birth">Nombre de naissances : </string>
-        <string name="initializing_content">Renseignez votre avancement sur les succès d\'élevage !</string>
-        <string name="initializing_coupling">Nombre d\'accouplements : </string>
+        <string name="initializing_setup_title">Mise à jours des succès</string>
+        <string name="initializing_setup_birth">Nombre de naissances : </string>
+        <string name="initializing_setup_content">Renseignez votre avancement sur les succès d\'élevage !</string>
+        <string name="initializing_setup_coupling">Nombre d\'accouplements : </string>
+
+        <!-- Initializing end fragment -->
+        <string name="initializing_end_title">DragoFus</string>
+        <string name="initializing_end_content">L\'appication est prête à l\'utilisation !</string>
+        <string name="initializing_end_button">C\'est partis !</string>
 
 </resources>

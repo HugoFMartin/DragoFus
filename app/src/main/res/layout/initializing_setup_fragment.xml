@@ -9,10 +9,9 @@
         android:id="@+id/title_initializing_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/titleFragment"
-        android:text="@string/initializing_title"
+        style="@style/title_fragment"
+        android:text="@string/initializing_setup_title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +21,6 @@
         android:layout_margin="12dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
-
         app:layout_constraintBottom_toTopOf="@+id/validate_initializing_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +30,7 @@
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/secondary"
             android:padding="15dp"
             app:layout_constraintBottom_toTopOf="@+id/validate_initializing_button"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +42,7 @@
                 style="@style/initialize_content_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/initializing_content"
+                android:text="@string/initializing_setup_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -66,12 +65,12 @@
                     style="@style/initialize_field_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/initializing_coupling" />
+                    android:text="@string/initializing_setup_coupling" />
 
                 <EditText
                     android:id="@+id/nb_coupling_initializing_editTextNumber"
                     android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:inputType="number" />
 
             </LinearLayout>
@@ -93,12 +92,12 @@
                     style="@style/initialize_field_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/initializing_birth" />
+                    android:text="@string/initializing_setup_birth" />
 
                 <EditText
                     android:id="@+id/nb_birth_initializing_editTextNumber"
                     android:layout_width="50dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:inputType="number"
                     app:layout_constraintStart_toEndOf="@+id/nb_birth_initializing_textView"
                     app:layout_constraintTop_toBottomOf="@+id/nb_coupling_initializing_editTextNumber" />
@@ -110,9 +109,7 @@
 
     <Button
         android:id="@+id/validate_initializing_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        style="@style/bottom_button_fragment"
         android:text="@string/validate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/initializeSetupFragment"
-        android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.InitializeSetupFragment"
+        android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.initialize_setup.InitializeSetupFragment"
         android:label="InitializeSetupFragment" >
         <action
             android:id="@+id/action_initializeSetupFragment_to_initializeEndFragment"

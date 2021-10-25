@@ -73,7 +73,8 @@
                     android:layout_height="50dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:inputType="number"
-                    android:hint="@string/initializing_setup_edit_hint" />
+                    android:hint="@string/initializing_setup_edit_hint"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
@@ -102,7 +103,8 @@
                     android:layout_height="50dp"
                     android:gravity="center_horizontal|center_vertical"
                     android:inputType="number"
-                    android:hint="@string/initializing_setup_edit_hint" />
+                    android:hint="@string/initializing_setup_edit_hint"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 

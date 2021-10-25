@@ -69,9 +69,11 @@
 
                 <EditText
                     android:id="@+id/nb_coupling_initializing_editTextNumber"
-                    android:layout_width="50dp"
+                    android:layout_width="75dp"
                     android:layout_height="50dp"
-                    android:inputType="number" />
+                    android:gravity="center_horizontal|center_vertical"
+                    android:inputType="number"
+                    android:hint="@string/initializing_setup_edit_hint" />
 
             </LinearLayout>
 
@@ -96,11 +98,11 @@
 
                 <EditText
                     android:id="@+id/nb_birth_initializing_editTextNumber"
-                    android:layout_width="50dp"
+                    android:layout_width="75dp"
                     android:layout_height="50dp"
+                    android:gravity="center_horizontal|center_vertical"
                     android:inputType="number"
-                    app:layout_constraintStart_toEndOf="@+id/nb_birth_initializing_textView"
-                    app:layout_constraintTop_toBottomOf="@+id/nb_coupling_initializing_editTextNumber" />
+                    android:hint="@string/initializing_setup_edit_hint" />
 
             </LinearLayout>
 

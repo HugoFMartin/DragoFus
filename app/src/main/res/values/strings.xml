@@ -25,6 +25,7 @@
         <string name="initializing_setup_birth">Nombre de naissances : </string>
         <string name="initializing_setup_content">Renseignez votre avancement sur les succès d\'élevage !</string>
         <string name="initializing_setup_coupling">Nombre d\'accouplements : </string>
+        <string name="initializing_setup_edit_hint">0</string>
 
         <!-- Initializing end fragment -->
         <string name="initializing_end_title">DragoFus</string>

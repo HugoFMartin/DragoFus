@@ -18,7 +18,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
         android:layout_height="400dp"
-        android:layout_margin="12dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toTopOf="@+id/validate_initializing_button"

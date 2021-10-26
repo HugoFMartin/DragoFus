@@ -12,8 +12,8 @@
         <string name="initializing_home_card_content">
             L\'application qui permet de \n
             &#8226; gérer des montures \n
-            &#8226; réaliser et voir des accouplements \n
-            &#8226; et l\'évolution des succès élevage \n
+            &#8226; réaliser des accouplements \n
+            &#8226; et les succès élevage \n
             du MMORPG Dofus !
         </string>
         <string name="initializing_home_subcontent">
@@ -30,6 +30,6 @@
         <!-- Initializing end fragment -->
         <string name="initializing_end_title">DragoFus</string>
         <string name="initializing_end_content">L\'appication est prête à l\'utilisation !</string>
-        <string name="initializing_end_button">C\'est partis !</string>
+        <string name="initializing_end_button">C\'est parti !</string>
 
 </resources>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DragoFus">
         <activity
+            android:name=".ui.main_screen.activity.DragodindeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

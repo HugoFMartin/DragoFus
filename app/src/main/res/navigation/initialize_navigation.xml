@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/initialize_navigation"
+    app:startDestination="@id/initializeHomeFragment">
+
+    <fragment
+        android:id="@+id/initializeHomeFragment"
+        android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.InitializeHomeFragment"
+        android:label="InitializeHomeFragment" >
+        <action
+            android:id="@+id/action_initializeHomeFragment_to_initializeSetupFragment"
+            app:destination="@id/initializeSetupFragment" />
+        <action
+            android:id="@+id/action_initializeHomeFragment_to_initializeEndFragment"
+            app:destination="@id/initializeEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initializeSetupFragment"
+        android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.initialize_setup.InitializeSetupFragment"
+        android:label="InitializeSetupFragment" >
+        <action
+            android:id="@+id/action_initializeSetupFragment_to_initializeEndFragment"
+            app:destination="@id/initializeEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initializeEndFragment"
+        android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.InitializeEndFragment"
+        android:label="InitializeEndFragment" />
+</navigation>

@@ -2,6 +2,7 @@ package com.hugofmartin.dragofus.data.database.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.hugofmartin.dragofus.data.entity.Achievement
 import kotlinx.coroutines.flow.Flow
@@ -17,6 +18,6 @@ interface AchievementDao {
     @Query("SELECT * FROM achievement WHERE id = :id")
     fun getAppAchievement(id: Int): Flow<Achievement>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(entities: Achievement)
 }

@@ -4,7 +4,9 @@ import com.hugofmartin.dragofus.common.Constants
 import com.hugofmartin.dragofus.data.database.DatabaseManager
 import com.hugofmartin.dragofus.data.database.dao.AchievementDao
 import com.hugofmartin.dragofus.data.entity.Achievement
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.withContext
 
 interface AchievementRepository {
     val appAchievement: Flow<Achievement>
@@ -27,14 +29,21 @@ class AchievementRepositoryImpl(
     override val appAchievement = achievementDao.getAppAchievement(Constants.ACHIEVEMENT_ID)
 
     override suspend fun incrementCoupling() {
-        achievementDao.incrementCoupling(Constants.ACHIEVEMENT_ID)
+        withContext(Dispatchers.IO){
+            achievementDao.incrementCoupling(Constants.ACHIEVEMENT_ID)
+        }
     }
 
     override suspend fun incrementBirth() {
-        achievementDao.incrementBirth(Constants.ACHIEVEMENT_ID)
+        withContext(Dispatchers.IO){
+            achievementDao.incrementBirth(Constants.ACHIEVEMENT_ID)
+
+        }
     }
 
     override suspend fun createAchievement(achievement: Achievement) {
-        achievementDao.insert(achievement)
+        withContext(Dispatchers.IO){
+            achievementDao.insert(achievement)
+        }
     }
 }

@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
+import kotlinx.android.synthetic.main.home_dragodinde_fragment.*
 
 class HomeDragodindeFragment: Fragment() {
     override fun onCreateView(
@@ -24,6 +24,11 @@ class HomeDragodindeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        go_to_list_dragodinde_button.setOnClickListener {  }
+
+        go_to_list_coupling_button.setOnClickListener {  }
+
+        go_to_achievement_button.setOnClickListener {  }
 
     }
 }

@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.withContext
 
 interface AchievementRepository {
-    val appAchievement: Flow<Achievement>
+    fun getAppAchievement(): Flow<Achievement>
     suspend fun incrementCoupling()
     suspend fun incrementBirth()
     suspend fun createAchievement(achievement: Achievement)
@@ -26,7 +26,9 @@ class AchievementRepositoryImpl(
     private val achievementDao: AchievementDao
 ) : AchievementRepository {
 
-    override val appAchievement = achievementDao.getAppAchievement(Constants.ACHIEVEMENT_ID)
+    override  fun getAppAchievement(): Flow<Achievement> {
+        return achievementDao.getAppAchievement(Constants.ACHIEVEMENT_ID)
+    }
 
     override suspend fun incrementCoupling() {
         withContext(Dispatchers.IO){

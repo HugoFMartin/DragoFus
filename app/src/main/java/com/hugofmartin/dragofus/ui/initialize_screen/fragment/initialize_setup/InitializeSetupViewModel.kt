@@ -5,7 +5,6 @@ import com.hugofmartin.dragofus.common.Constants
 import com.hugofmartin.dragofus.data.entity.Achievement
 import com.hugofmartin.dragofus.data.entity.AchievementException
 import com.hugofmartin.dragofus.data.repository.AchievementRepository
-import com.hugofmartin.dragofus.ui.viewmodel.AchievementViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch

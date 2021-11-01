@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
 import kotlinx.android.synthetic.main.home_dragodinde_fragment.*
 
@@ -28,7 +29,9 @@ class HomeDragodindeFragment: Fragment() {
 
         go_to_list_coupling_button.setOnClickListener {  }
 
-        go_to_achievement_button.setOnClickListener {  }
+        go_to_achievement_button.setOnClickListener {
+            findNavController().navigate(R.id.action_homeDragodindeFragment_to_achievementFragment)
+        }
 
     }
 }

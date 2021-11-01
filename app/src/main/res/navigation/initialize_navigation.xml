@@ -26,5 +26,10 @@
     <fragment
         android:id="@+id/initializeEndFragment"
         android:name="com.hugofmartin.dragofus.ui.initialize_screen.fragment.InitializeEndFragment"
-        android:label="InitializeEndFragment" />
+        android:label="InitializeEndFragment" >
+        <action
+            android:id="@+id/action_initializeEndFragment_to_main_navigation"
+            app:destination="@id/main_navigation" />
+    </fragment>
+    <include app:graph="@navigation/main_navigation" />
 </navigation>

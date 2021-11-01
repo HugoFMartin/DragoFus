@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/birth_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:scaleY="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birth_achivement_desc_textView" />
+
+        <ProgressBar
+            android:id="@+id/coupling_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:scaleY="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coupling_achivement_desc_textView" />
+
+        <TextView
+            android:id="@+id/achivement_title_textView"
+            style="@style/title_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/achievements_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coupling_achivement_title_textView"
+            style="@style/title_acheviements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="@string/coupling_title_achivement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/achivement_title_textView" />
+
+        <TextView
+            android:id="@+id/coupling_achivement_desc_textView"
+            style="@style/desc_acheviements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coupling_desc_achivement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coupling_achivement_title_textView" />
+
+        <TextView
+            android:id="@+id/birth_achivement_title_textView"
+            style="@style/title_acheviements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/birth_title_achivement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coupling_progressBar" />
+
+        <TextView
+            android:id="@+id/birth_achivement_desc_textView"
+            style="@style/desc_acheviements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/birth_desc_achivement"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birth_achivement_title_textView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen1_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/birth_progressBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen1_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_one"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/amande_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/doree_imageView"
+                    app:layout_constraintTop_toBottomOf="@id/gen1_textView"
+                    app:srcCompat="@drawable/dragodindes_amande" />
+
+                <TextView
+                    android:id="@+id/amande_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Amande"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_textView"
+                    app:layout_constraintTop_toBottomOf="@id/amande_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_imageView"
+                    app:layout_constraintTop_toBottomOf="@id/gen1_textView"
+                    app:srcCompat="@drawable/dragodindes_doree" />
+
+                <TextView
+                    android:id="@+id/doree_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Dorée"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_textView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_textView"
+                    app:layout_constraintTop_toBottomOf="@id/doree_imageView" />
+
+                <ImageView
+                    android:id="@+id/rousse_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gen1_textView"
+                    app:srcCompat="@drawable/dragodindes_rousse" />
+
+                <TextView
+                    android:id="@+id/rousse_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rousse_imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen2_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen1_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen2_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/amande_rousse_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/amande_rousse_textView"
+                    app:layout_constraintEnd_toStartOf="@id/amande_doree_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen2_textView"
+                    app:srcCompat="@drawable/dragodindes_amanderousse" />
+
+                <TextView
+                    android:id="@+id/amande_rousse_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_doree_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/amande_rousse_imageView" />
+
+                <ImageView
+                    android:id="@+id/amande_doree_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/amande_doree_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_rousse_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/amande_rousse_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen2_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeivoire" />
+
+                <TextView
+                    android:id="@+id/amande_doree_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_rousse_textView"
+                    app:layout_constraintStart_toEndOf="@+id/amande_rousse_textView"
+                    app:layout_constraintTop_toBottomOf="@id/amande_doree_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_rousse_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/doree_rousse_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/amande_doree_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen2_textView"
+                    app:srcCompat="@drawable/dragodindes_roussedoree" />
+
+                <TextView
+                    android:id="@+id/doree_rousse_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/amande_doree_textView"
+                    app:layout_constraintTop_toBottomOf="@id/doree_rousse_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen3_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen2_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen3_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_tree"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ebene_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/ebene_textView"
+                    app:layout_constraintEnd_toStartOf="@id/indigo_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen3_textView"
+                    app:srcCompat="@drawable/dragodindes_ebene" />
+
+                <TextView
+                    android:id="@+id/ebene_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/indigo_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_imageView" />
+
+                <ImageView
+                    android:id="@+id/indigo_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/indigo_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen3_textView"
+                    app:srcCompat="@drawable/dragodindes_indigo" />
+
+                <TextView
+                    android:id="@+id/indigo_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen4_cardView"
+            style="@style/gen_card_view_style"
+            android:layout_height="400dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen3_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen4_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_four"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/doree_indigo_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_indigo_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_ebene_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gen4_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeindigo" />
+
+                <TextView
+                    android:id="@+id/doree_indigo_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_ebene_imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_ebene_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/doree_indigo_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_ebene_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_ebene_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_indigo_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/doree_indigo_imageView"
+                    app:layout_constraintTop_toBottomOf="@id/gen4_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeebene" />
+
+                <TextView
+                    android:id="@+id/doree_ebene_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_indigo_imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_indigo_textView"
+                    app:layout_constraintStart_toEndOf="@+id/doree_indigo_textView"
+                    app:layout_constraintTop_toBottomOf="@id/doree_ebene_imageView" />
+
+                <ImageView
+                    android:id="@+id/amande_ebene_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_ebene_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/amande_indigo_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_indigo_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeebene" />
+
+                <TextView
+                    android:id="@+id/amande_ebene_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_ebene_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/amande_indigo_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_ebene_imageView" />
+
+                <ImageView
+                    android:id="@+id/amande_indigo_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_indigo_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_ebene_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_ebene_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_ebene_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeindigo" />
+
+                <TextView
+                    android:id="@+id/amande_indigo_textView"
+                    style="@style/dragodinde_name"
+                    android:text="amande indigo"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_ebene_imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_ebene_textView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_ebene_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_indigo_imageView" />
+
+                <ImageView
+                    android:id="@+id/rousse_indigo_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_indigo_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_ebene_imageView"
+                    app:layout_constraintTop_toBottomOf="@id/gen4_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseindigo" />
+
+                <TextView
+                    android:id="@+id/rousse_indigo_textView"
+                    style="@style/dragodinde_name"
+                    android:text="rousse indigo"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_ebene_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_ebene_textView"
+                    app:layout_constraintTop_toBottomOf="@id/rousse_indigo_imageView" />
+
+                <ImageView
+                    android:id="@+id/rousse_ebene_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_ebene_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_indigo_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_indigo_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseebene" />
+
+                <TextView
+                    android:id="@+id/rousse_ebene_textView"
+                    style="@style/dragodinde_name"
+                    android:text="rousse ebene"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_ebene_imageView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_indigo_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_ebene_imageView" />
+
+                <ImageView
+                    android:id="@+id/indigo_ebene_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/indigo_ebene_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_indigo_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoebene" />
+
+                <TextView
+                    android:id="@+id/indigo_ebene_textView"
+                    style="@style/dragodinde_name"
+                    android:text="indigo ebene"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_ebene_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen5_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen4_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen5_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_five"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/pourpre_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen5_textView"
+                    app:srcCompat="@drawable/dragodindes_orchidee" />
+
+                <TextView
+                    android:id="@+id/orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pourpre_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orchidee_imageView" />
+
+                <ImageView
+                    android:id="@+id/pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/orchidee_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen5_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpre" />
+
+                <TextView
+                    android:id="@+id/pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/orchidee_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen6_cardView"
+            style="@style/gen_card_view_style"
+            android:layout_height="500dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen5_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen6_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_six"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/rousse_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_orchidee_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_pourpre_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen6_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseorchidee" />
+
+                <TextView
+                    android:id="@+id/rousse_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_orchidee_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_pourpre_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_orchidee_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/rousse_pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_pourpre_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_pourpre_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_orchidee_textView"
+                    app:srcCompat="@drawable/dragodindes_roussepourpre" />
+
+                <TextView
+                    android:id="@+id/rousse_pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_orchidee_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/amande_pourpre_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_pourpre_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/amande_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_orchidee_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/amande_pourpre_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_orchidee_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeorchidee" />
+
+                <TextView
+                    android:id="@+id/amande_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_orchidee_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/amande_pourpre_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_orchidee_imageView" />
+
+                <ImageView
+                    android:id="@+id/amande_pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_pourpre_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_orchidee_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_pourpre_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_pourpre_textView"
+                    app:srcCompat="@drawable/dragodindes_amandepourpre" />
+
+                <TextView
+                    android:id="@+id/amande_pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_pourpre_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/amande_orchidee_textView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_pourpre_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_pourpre_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_orchidee_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_pourpre_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen6_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeorchidee" />
+
+                <TextView
+                    android:id="@+id/doree_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_pourpre_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/doree_pourpre_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_orchidee_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_pourpre_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_orchidee_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/doree_orchidee_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen6_textView"
+                    app:srcCompat="@drawable/dragodindes_doreepourpre" />
+
+                <TextView
+                    android:id="@+id/doree_pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_pourpre_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/rousse_orchidee_textView"
+                    app:layout_constraintStart_toEndOf="@id/doree_orchidee_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_pourpre_imageView" />
+
+                <ImageView
+                    android:id="@+id/indigo_pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_pourpre_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/pourpre_orchidee_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_pourpre_textView"
+                    app:srcCompat="@drawable/dragodindes_indigopourpre" />
+
+                <TextView
+                    android:id="@+id/indigo_pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/pourpre_orchidee_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_pourpre_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/indigo_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_orchidee_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_pourpre_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_orchidee_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoorchidee" />
+
+                <TextView
+                    android:id="@+id/indigo_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_orchidee_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_pourpre_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_orchidee_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/pourpre_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_orchidee_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_pourpre_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_pourpre_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpreorchidee" />
+
+                <TextView
+                    android:id="@+id/pourpre_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_pourpre_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_orchidee_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/ebene_orchidee_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_orchidee_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ebene_pourpre_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_pourpre_textView"
+                    app:srcCompat="@drawable/dragodindes_ebeneorchidee" />
+
+                <TextView
+                    android:id="@+id/ebene_orchidee_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_pourpre_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ebene_pourpre_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_orchidee_imageView" />
+
+                <ImageView
+                    android:id="@+id/ebene_pourpre_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_pourpre_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/indigo_orchidee_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_orchidee_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_pourpre_textView"
+                    app:srcCompat="@drawable/dragodindes_ebenepourpre" />
+
+                <TextView
+                    android:id="@+id/ebene_pourpre_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_pourpre_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/indigo_orchidee_textView"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_orchidee_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_pourpre_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen7_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen6_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen7_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_seven"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/turquoise_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen7_textView"
+                    app:srcCompat="@drawable/dragodindes_ivoire" />
+
+                <TextView
+                    android:id="@+id/ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/turquoise_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_imageView" />
+
+                <ImageView
+                    android:id="@+id/turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/turquoise_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen7_textView"
+                    app:srcCompat="@drawable/dragodindes_turquoise" />
+
+                <TextView
+                    android:id="@+id/turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/turquoise_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen8_cardView"
+            style="@style/gen_card_view_style"
+            android:layout_height="600dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen7_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen8_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_eight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/rousse_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="getParents"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_turquoise_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen8_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseivoire" />
+
+                <TextView
+                    android:id="@+id/rousse_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_turquoise_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/rousse_turquoise_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_ivoire_imageView" />
+
+                <ImageView
+                    android:id="@+id/rousse_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_turquoise_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/amande_ivoire_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen8_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseturquoise" />
+
+                <TextView
+                    android:id="@+id/rousse_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_ivoire_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/amande_ivoire_textView"
+                    app:layout_constraintStart_toEndOf="@id/rousse_ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_turquoise_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/amande_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_ivoire_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_turquoise_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen8_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeivoire" />
+
+                <TextView
+                    android:id="@+id/amande_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_turquoise_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_turquoise_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_ivoire_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/amande_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_turquoise_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_ivoire_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeturquoise" />
+
+                <TextView
+                    android:id="@+id/amande_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_ivoire_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/doree_ivoire_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_turquoise_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_turquoise_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/amande_turquoise_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeivoire" />
+
+                <TextView
+                    android:id="@+id/doree_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_turquoise_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/doree_turquoise_textView"
+                    app:layout_constraintStart_toEndOf="@id/amande_turquoise_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_ivoire_imageView" />
+
+                <ImageView
+                    android:id="@+id/doree_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_turquoise_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeturquoise" />
+
+                <TextView
+                    android:id="@+id/doree_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_turquoise_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/doree_ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_turquoise_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/indigo_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/indigo_turquoise_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoivoire" />
+
+                <TextView
+                    android:id="@+id/indigo_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_turquoise_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/indigo_turquoise_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_ivoire_imageView" />
+
+                <ImageView
+                    android:id="@+id/indigo_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_turquoise_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ebene_ivoire_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoturquoise" />
+
+                <TextView
+                    android:id="@+id/indigo_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_ivoire_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ebene_ivoire_textView"
+                    app:layout_constraintStart_toEndOf="@id/indigo_ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_turquoise_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/ebene_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_ivoire_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_turquoise_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_ebeneivoire" />
+
+                <TextView
+                    android:id="@+id/ebene_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_turquoise_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_turquoise_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_ivoire_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/ebene_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_turquoise_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/pourpre_ivoire_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_ebeneturquoise" />
+
+                <TextView
+                    android:id="@+id/ebene_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_ivoire_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/pourpre_ivoire_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_turquoise_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/pourpre_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/pourpre_turquoise_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_turquoise_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpreivoire" />
+
+                <TextView
+                    android:id="@+id/pourpre_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_turquoise_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/pourpre_turquoise_textView"
+                    app:layout_constraintStart_toEndOf="@id/ebene_turquoise_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_ivoire_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/pourpre_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_turquoise_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pourpre_ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpreturquoise" />
+
+                <TextView
+                    android:id="@+id/pourpre_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_turquoise_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pourpre_ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_turquoise_imageView" />
+
+                <ImageView
+                    android:id="@+id/orchidee_ivoire_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_ivoire_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/orchidee_turquoise_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_orchideeivoire" />
+
+                <TextView
+                    android:id="@+id/orchidee_ivoire_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/orchidee_turquoise_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orchidee_ivoire_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/orchidee_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_turquoise_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ivoire_turquoise_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/orchidee_ivoire_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_ivoire_textView"
+                    app:srcCompat="@drawable/dragodindes_orchideeturquoise" />
+
+                <TextView
+                    android:id="@+id/orchidee_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ivoire_turquoise_textView"
+                    app:layout_constraintStart_toEndOf="@id/orchidee_ivoire_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/orchidee_turquoise_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/ivoire_turquoise_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_turquoise_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/orchidee_turquoise_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_turquoise_textView"
+                    app:srcCompat="@drawable/dragodindes_ivoireturquoise" />
+
+                <TextView
+                    android:id="@+id/ivoire_turquoise_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/orchidee_turquoise_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_turquoise_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen9_cardView"
+            style="@style/gen_card_view_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen8_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen9_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_nine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/prune_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen9_textView"
+                    app:srcCompat="@drawable/dragodindes_emeraude" />
+
+                <TextView
+                    android:id="@+id/emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/prune_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emeraude_imageView" />
+
+                <ImageView
+                    android:id="@+id/prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/prune_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen9_textView"
+                    app:srcCompat="@drawable/dragodindes_prune" />
+
+                <TextView
+                    android:id="@+id/prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/prune_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gen10_cardView"
+            style="@style/gen_card_view_style"
+            android:layout_height="900dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gen9_cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/gen10_textView"
+                    style="@style/title_generation"
+                    android:text="@string/generation_ten"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/amande_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="getParents"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_emeraude_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gen10_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeemeraude" />
+
+                <TextView
+                    android:id="@+id/amande_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/rousse_emeraude_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_emeraude_imageView" />
+
+                <ImageView
+                    android:id="@+id/rousse_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_emeraude_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/amande_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen10_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseemeraude" />
+
+                <TextView
+                    android:id="@+id/rousse_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/doree_emeraude_textView"
+                    app:layout_constraintStart_toEndOf="@id/amande_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_emeraude_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/doree_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_emeraude_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/gen10_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeemeraude" />
+
+                <TextView
+                    android:id="@+id/doree_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ordchidee_emeraude_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_emeraude_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/indigo_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ebene_emeraude_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoemeraude" />
+
+                <TextView
+                    android:id="@+id/indigo_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ebene_emeraude_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_emeraude_imageView" />
+
+                <ImageView
+                    android:id="@+id/ebene_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ordchidee_emeraude_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_ebeneemeraude" />
+
+                <TextView
+                    android:id="@+id/ebene_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ordchidee_emeraude_textView"
+                    app:layout_constraintStart_toEndOf="@id/indigo_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_emeraude_imageView" />
+
+                <ImageView
+                    android:id="@+id/ordchidee_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ordchidee_emeraude_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_orchideeemeraude" />
+
+                <TextView
+                    android:id="@+id/ordchidee_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/turquoise_emeraude_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ordchidee_emeraude_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/pourpre_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ivoire_emeraude_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpreemeraude" />
+
+                <TextView
+                    android:id="@+id/pourpre_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_prune_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ivoire_emeraude_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_emeraude_imageView" />
+
+                <ImageView
+                    android:id="@+id/ivoire_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_emeraude_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/turquoise_emeraude_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/pourpre_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_ivoireemeraude" />
+
+                <TextView
+                    android:id="@+id/ivoire_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_prune_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/turquoise_emeraude_textView"
+                    app:layout_constraintStart_toEndOf="@id/pourpre_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_emeraude_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/turquoise_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/turquoise_emeraude_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_emeraude_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ordchidee_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_turquoiseemeraude" />
+
+                <TextView
+                    android:id="@+id/turquoise_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_prune_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_emeraude_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/turquoise_emeraude_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/amande_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/amande_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/rousse_prune_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_amandeprune" />
+
+                <TextView
+                    android:id="@+id/amande_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_prune_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/rousse_prune_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_prune_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/rousse_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/rousse_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/doree_prune_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/amande_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_rousseprune" />
+
+                <TextView
+                    android:id="@+id/rousse_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_prune_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/doree_prune_textView"
+                    app:layout_constraintStart_toEndOf="@id/amande_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_prune_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/doree_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/doree_prune_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/turquoise_emeraude_textView"
+                    app:srcCompat="@drawable/dragodindes_doreeprune" />
+
+                <TextView
+                    android:id="@+id/doree_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_prune_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rousse_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/indigo_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/indigo_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ebene_prune_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amande_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_indigoprune" />
+
+                <TextView
+                    android:id="@+id/indigo_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/ebene_prune_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_prune_imageView" />
+
+
+                <ImageView
+                    android:id="@+id/ebene_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ebene_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/orchidee_prune_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/indigo_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/rousse_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_ebeneprune" />
+
+                <TextView
+                    android:id="@+id/ebene_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/orchidee_prune_textView"
+                    app:layout_constraintStart_toEndOf="@id/indigo_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/orchidee_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/orchidee_prune_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/doree_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_orchideeprune" />
+
+                <TextView
+                    android:id="@+id/orchidee_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ebene_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/orchidee_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/pourpre_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/ivoire_prune_imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indigo_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_pourpreprune" />
+
+                <TextView
+                    android:id="@+id/pourpre_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/prune_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/ivoire_prune_textView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pourpre_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/ivoire_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_prune_textView"
+                    app:layout_constraintEnd_toStartOf="@+id/turquoise_prune_imageView"
+                    app:layout_constraintStart_toEndOf="@+id/pourpre_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/ebene_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_ivoireprune" />
+
+                <TextView
+                    android:id="@+id/ivoire_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/prune_emeraude_imageView"
+                    app:layout_constraintEnd_toStartOf="@id/turquoise_prune_textView"
+                    app:layout_constraintStart_toEndOf="@id/pourpre_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/turquoise_prune_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/turquoise_prune_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_prune_imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/orchidee_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_turquoiseprune" />
+
+                <TextView
+                    android:id="@+id/turquoise_prune_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toTopOf="@+id/prune_emeraude_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivoire_prune_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/turquoise_prune_imageView" />
+
+                <ImageView
+                    android:id="@+id/prune_emeraude_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/prune_emeraude_textView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivoire_prune_textView"
+                    app:srcCompat="@drawable/dragodindes_pruneemeraude" />
+
+                <TextView
+                    android:id="@+id/prune_emeraude_textView"
+                    style="@style/dragodinde_name"
+                    android:text="Rousse"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prune_emeraude_imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

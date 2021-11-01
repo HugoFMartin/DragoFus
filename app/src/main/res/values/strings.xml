@@ -37,4 +37,21 @@
         <string name="to_list_dragodinde_button">Mon enclos</string>
         <string name="to_list_coupling_button">Mes accouplements</string>
         <string name="to_achievement_button">Succès</string>
+
+        <!-- Achievements fragment -->
+        <string name="achievements_title">Succès</string>
+        <string name="birth_title_achivement">Allez on pousse!</string>
+        <string name="birth_desc_achivement">Faire naître 1000 montures: <br>%1$d / %2$d</br></string>
+        <string name="coupling_title_achivement">Entremetteur!</string>
+        <string name="coupling_desc_achivement">Réaliser 1000 accouplements: <br>%1$d / %2$d</br></string>
+        <string name="generation_one">Première génération</string>
+        <string name="generation_two">Deuxième génération</string>
+        <string name="generation_tree">Troisième génération</string>
+        <string name="generation_four">Quatrième génération</string>
+        <string name="generation_five">Cinquième génération</string>
+        <string name="generation_six">Sixième génération</string>
+        <string name="generation_seven">Septième génération</string>
+        <string name="generation_eight">Huitième génération</string>
+        <string name="generation_nine">Neuvième génération</string>
+        <string name="generation_ten">Dixième génération</string>
 </resources>

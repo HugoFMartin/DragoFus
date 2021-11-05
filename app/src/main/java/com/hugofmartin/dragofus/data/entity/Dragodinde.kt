@@ -10,9 +10,9 @@ data class Dragodinde(
     val name: String,
     val race: Race,
     val gender: Gender,
-    var isImpregnated: Boolean = false,
-    val couplingNb: Int,
+    var isPregnant: Boolean = false,
     val isFertile: Boolean,
+    val isSterile: Boolean = false,
+    val couplingNb: Int,
     val gestation: Int,
-    val isSterile: Boolean = false
 )

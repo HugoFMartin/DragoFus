@@ -11,9 +11,16 @@
         <action
             android:id="@+id/action_homeDragodindeFragment_to_achievementFragment"
             app:destination="@id/achievementFragment" />
+        <action
+            android:id="@+id/action_homeDragodindeFragment_to_listDragodindeFragment"
+            app:destination="@id/listDragodindeFragment" />
     </fragment>
     <fragment
         android:id="@+id/achievementFragment"
         android:name="com.hugofmartin.dragofus.ui.main_screen.achievement.AchievementFragment"
         android:label="AchievementFragment" />
+    <fragment
+        android:id="@+id/listDragodindeFragment"
+        android:name="com.hugofmartin.dragofus.ui.main_screen.list_dragodinde.ListDragodindeFragment"
+        android:label="ListDragodindeFragment" />
 </navigation>

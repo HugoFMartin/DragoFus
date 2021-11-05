@@ -25,7 +25,10 @@ class HomeDragodindeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        go_to_list_dragodinde_button.setOnClickListener {  }
+        go_to_list_dragodinde_button.setOnClickListener {
+            findNavController().navigate(R.id.action_homeDragodindeFragment_to_listDragodindeFragment)
+
+        }
 
         go_to_list_coupling_button.setOnClickListener {  }
 

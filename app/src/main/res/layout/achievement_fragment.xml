@@ -1134,7 +1134,6 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/gen9_cardView"
             style="@style/gen_card_view_style"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gen8_cardView">
@@ -1462,7 +1461,7 @@
                     android:id="@+id/indigo_prune_textView"
                     style="@style/dragodinde_name"
                     android:text="Rousse"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/pourpre_prune_imageView"
                     app:layout_constraintEnd_toStartOf="@id/ebene_prune_textView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/indigo_prune_imageView" />
@@ -1482,7 +1481,7 @@
                     android:id="@+id/ebene_prune_textView"
                     style="@style/dragodinde_name"
                     android:text="Rousse"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/ivoire_prune_imageView"
                     app:layout_constraintEnd_toStartOf="@id/orchidee_prune_textView"
                     app:layout_constraintStart_toEndOf="@id/indigo_prune_textView"
                     app:layout_constraintTop_toBottomOf="@+id/ebene_prune_imageView" />
@@ -1501,7 +1500,7 @@
                     android:id="@+id/orchidee_prune_textView"
                     style="@style/dragodinde_name"
                     android:text="Rousse"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/turquoise_prune_imageView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ebene_prune_textView"
                     app:layout_constraintTop_toBottomOf="@+id/orchidee_prune_imageView" />

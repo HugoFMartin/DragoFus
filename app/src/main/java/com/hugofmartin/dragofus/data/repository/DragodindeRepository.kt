@@ -8,8 +8,10 @@ import kotlinx.coroutines.flow.Flow
 interface DragodindeRepository {
     val allDragodindes: Flow<List<Dragodinde>>
     suspend fun addDragodinde(dragodinde: Dragodinde)
+    suspend fun deleteDragodinde(dragodindeId: Dragodinde)
     suspend fun makeUnFertile(dragodindeId: Int)
-    suspend fun makeImpregnated(femaleDragodindeId: Int)
+    suspend fun makeFertile(dragodindeId: Int)
+    suspend fun makePregnant(femaleDragodindeId: Int)
     suspend fun decrementCoupling(dragodindeId: Int)
 
     companion object {
@@ -30,12 +32,20 @@ class DragondindeRepositoryImpl(
         dragodindeDao.insert(dragodinde)
     }
 
+    override suspend fun deleteDragodinde(dragodindeId: Dragodinde){
+        dragodindeDao.delete(dragodindeId)
+    }
+
     override suspend fun makeUnFertile(dragodindeId: Int) {
         dragodindeDao.makeUnFertile(dragodindeId)
     }
 
-    override suspend fun makeImpregnated(femaleDragodindeId: Int) {
-        dragodindeDao.makeImpregnated(femaleDragodindeId)
+    override suspend fun makeFertile(dragodindeId: Int) {
+        dragodindeDao.makeFertile(dragodindeId)
+    }
+
+    override suspend fun makePregnant(femaleDragodindeId: Int) {
+        dragodindeDao.makePregnant(femaleDragodindeId)
     }
 
     override suspend fun decrementCoupling(dragodindeId: Int) {

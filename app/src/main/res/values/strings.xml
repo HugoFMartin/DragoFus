@@ -54,4 +54,27 @@
         <string name="generation_eight">Huitième génération</string>
         <string name="generation_nine">Neuvième génération</string>
         <string name="generation_ten">Dixième génération</string>
+
+        <!-- List Dragodinde fragment -->
+        <string name="male_filter_check_box">Male</string>
+        <string name="female_filter_check_box">Femelle</string>
+        <string name="is_pregnant_check_box">Fécondée</string>
+        <string name="is_not_pregnant_check_box">Non féconde</string>
+        <string name="is_fertile_filter_check_box">Féconde</string>
+        <string name="is_sterile_filter_check_box">Stérile</string>
+        <string name="list_dragodinde_title">Enclos</string>
+        <string name="add_dragodinde_button">Ajouter une nouvelle dragodinde</string>
+        <string name="search_name_hint">Rechercher une dragodinde</string>
+        <string name="toggle_filter">Afficher / Masquer les filtes</string>
+        <string name="filter">Filtrer par :</string>
+        <string name="sort">Trier par :</string>
+        <string name="name_radio_button">Nom</string>
+        <string name="race_radio_button">Génération</string>
+
+        <!-- Dragodinde view holder -->
+        <string name="nb_impregnated_reduc">Accoup… : </string>
+        <string name="nb_impregnated_view_holder"> %1$s /5</string>
+        <string name="isimpregnated_view_holder"> Dragodinde fécondée</string>
+        <string name="is_fertile_view_holder"> Dragodinde féconde</string>
+        <string name="is_sterile_view_holder"> Dragodinde stérile</string>
 </resources>

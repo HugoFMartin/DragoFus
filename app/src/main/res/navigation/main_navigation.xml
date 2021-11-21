@@ -22,5 +22,13 @@
     <fragment
         android:id="@+id/listDragodindeFragment"
         android:name="com.hugofmartin.dragofus.ui.main_screen.list_dragodinde.ListDragodindeFragment"
-        android:label="ListDragodindeFragment" />
+        android:label="ListDragodindeFragment" >
+        <action
+            android:id="@+id/action_listDragodindeFragment_to_addDragodindeFragment"
+            app:destination="@id/addDragodindeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDragodindeFragment"
+        android:name="com.hugofmartin.dragofus.ui.main_screen.add_dragodinde.AddDragodindeFragment"
+        android:label="AddDragodindeFragment" />
 </navigation>

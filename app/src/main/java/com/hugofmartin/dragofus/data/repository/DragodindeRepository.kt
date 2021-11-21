@@ -1,9 +1,12 @@
 package com.hugofmartin.dragofus.data.repository
 
+import com.hugofmartin.dragofus.common.Constants
 import com.hugofmartin.dragofus.data.database.DatabaseManager
 import com.hugofmartin.dragofus.data.database.dao.DragodindeDao
 import com.hugofmartin.dragofus.data.entity.Dragodinde
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.withContext
 
 interface DragodindeRepository {
     val allDragodindes: Flow<List<Dragodinde>>
@@ -29,7 +32,9 @@ class DragondindeRepositoryImpl(
     override val allDragodindes: Flow<List<Dragodinde>> = dragodindeDao.getAll()
 
     override suspend fun addDragodinde(dragodinde: Dragodinde) {
-        dragodindeDao.insert(dragodinde)
+        withContext(Dispatchers.IO){
+            dragodindeDao.insert(dragodinde)
+        }
     }
 
     override suspend fun deleteDragodinde(dragodindeId: Dragodinde){

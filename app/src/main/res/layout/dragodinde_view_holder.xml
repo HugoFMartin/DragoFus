@@ -48,12 +48,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/dragodinde_impregnated_nb_textViewHolder"
+            android:id="@+id/dragodinde_coupling_nb_textViewHolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/nb_impregnated_view_holder"
+            android:text="@string/nb_coupling_view_holder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -82,17 +82,17 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/nb_impregnated_reduc"
+            android:text="@string/nb_coupling_reduc"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/dragodinde_impregnated_nb_textViewHolder" />
+            app:layout_constraintEnd_toStartOf="@+id/dragodinde_coupling_nb_textViewHolder" />
 
         <TextView
-            android:id="@+id/is_impregnated_textViewHolder"
+            android:id="@+id/is_coupling_textViewHolder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:text="@string/isimpregnated_view_holder"
+            android:text="@string/is_pregnant_view_holder"
             android:textStyle="italic"
             android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/dragodinde_image_layout"

@@ -21,7 +21,7 @@ interface DragodindeDao {
     @Query("UPDATE dragodinde SET isPregnant= 1 WHERE id= :dragodindeId")
     fun makePregnant(dragodindeId: Int)
 
-    @Query("UPDATE dragodinde SET couplingNb= couplingNb-1 WHERE id= :dragodindeId")
+    @Query("UPDATE dragodinde SET nbCoupling= nbCoupling-1 WHERE id= :dragodindeId")
     fun decrementCoupling(dragodindeId: Int)
 
     @Delete

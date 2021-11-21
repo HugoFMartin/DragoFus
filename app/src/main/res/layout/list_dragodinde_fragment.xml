@@ -175,7 +175,7 @@
     <Button
         android:id="@+id/go_to_add_dragodinde_button"
         style="@style/bottom_button_fragment"
-        android:text="@string/add_dragodinde_button"
+        android:text="@string/go_to_add_dragodinde_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

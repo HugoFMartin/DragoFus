@@ -81,7 +81,7 @@ class ListDragodindeFragment: Fragment() {
         }
 
         go_to_add_dragodinde_button.setOnClickListener {
-//            findNavController().navigate(R.id.)
+            findNavController().navigate(R.id.action_listDragodindeFragment_to_addDragodindeFragment)
         }
     }
 }

@@ -83,10 +83,34 @@
     <style name="title_filter">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:textColor">@color/primary</item>
         <item name="android:textStyle">bold</item>
-
     </style>
+
+    <!-- Add dragodinde fragment -->
+    <style name="input_title_add_dragodinde">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="input_add_dragodinde">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:ems">8</item>
+    </style>
+
+    <style name="switchAddDragodindeFragment">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:switchPadding">12dp</item>
+    </style>
+
 </resources>

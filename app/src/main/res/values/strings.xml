@@ -63,7 +63,7 @@
         <string name="is_fertile_filter_check_box">Féconde</string>
         <string name="is_sterile_filter_check_box">Stérile</string>
         <string name="list_dragodinde_title">Enclos</string>
-        <string name="add_dragodinde_button">Ajouter une nouvelle dragodinde</string>
+        <string name="go_to_add_dragodinde_button">Ajouter une nouvelle dragodinde</string>
         <string name="search_name_hint">Rechercher une dragodinde</string>
         <string name="toggle_filter">Afficher / Masquer les filtes</string>
         <string name="filter">Filtrer par :</string>
@@ -72,9 +72,23 @@
         <string name="race_radio_button">Génération</string>
 
         <!-- Dragodinde view holder -->
-        <string name="nb_impregnated_reduc">Accoup… : </string>
-        <string name="nb_impregnated_view_holder"> %1$s /5</string>
-        <string name="isimpregnated_view_holder"> Dragodinde fécondée</string>
+        <string name="nb_coupling_reduc">Accoup… : </string>
+        <string name="nb_coupling_view_holder"> %1$s /5</string>
+        <string name="is_pregnant_view_holder"> Dragodinde fécondée</string>
         <string name="is_fertile_view_holder"> Dragodinde féconde</string>
         <string name="is_sterile_view_holder"> Dragodinde stérile</string>
+
+        <!-- Add dragodinde fragment -->
+        <string name="add_dragodinde_title">Dragodinde</string>
+        <string name="add_dragodinde_name">Nom</string>
+        <string name="add_dragodinde_name_placeholder">Anonyme</string>
+        <string name="add_dragodinde_generation">Génération</string>
+        <string name="add_dragodinde_is_fertile">Dragodinde féconde ?</string>
+        <string name="add_dragodinde_is_from_coupling">Dragodinde née d\'un accouplement ?</string>
+        <string name="add_dragodinde_gender">Genre :</string>
+        <string name="add_dragodinde_nb_coupling">Accouplements :</string>
+        <string name="add_dragodinde_nb_coupling_placeholder">/5</string>
+        <string name="add_dragodinde_gestation">Gestation :</string>
+        <string name="add_dragodinde_reproduction_placeholder">5</string>
+        <string name="add_dragodinde_button">Ajouter la dragodinde à l\'enclos</string>
 </resources>

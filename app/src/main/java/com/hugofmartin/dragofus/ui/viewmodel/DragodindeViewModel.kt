@@ -23,7 +23,7 @@ class DragodindeViewModel(
         }
     }
 
-    fun makeImpregnated(femaleDragodindeId: Int) {
+    fun makePregnant(femaleDragodindeId: Int) {
         viewModelScope.launch {
             dragodindeRepository.makePregnant(femaleDragodindeId)
         }

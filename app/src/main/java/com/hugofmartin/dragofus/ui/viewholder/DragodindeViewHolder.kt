@@ -16,7 +16,7 @@ class DragodindeViewHolder private constructor(itemView: View) : RecyclerView.Vi
         itemView.apply {
             dragodinde_imageViewHolder.setImageResource(model.race.getImage())
             dragodinde_name_textViewHolder.text = model.name
-            dragodinde_impregnated_nb_textViewHolder.text = resources.getString(R.string.nb_impregnated_view_holder,model.couplingNb.toString() );
+            dragodinde_coupling_nb_textViewHolder.text = resources.getString(R.string.nb_coupling_view_holder,model.nbCoupling.toString() );
             dragodinde_race_textViewHolder.text = model.race.type
 
             if ( model.gender == Gender.FEMALE){
@@ -27,12 +27,12 @@ class DragodindeViewHolder private constructor(itemView: View) : RecyclerView.Vi
             }
 
             if (model.isPregnant){
-                is_impregnated_textViewHolder.visibility = View.VISIBLE
+                is_coupling_textViewHolder.visibility = View.VISIBLE
             }
             if (model.isFertile) {
                 is_fertile_textViewHolder.visibility = View.VISIBLE
             }
-            if(model.couplingNb == 0) {
+            if(model.nbCoupling == 0) {
                 is_sterile_textViewHolder.visibility = View.VISIBLE
             }
         }

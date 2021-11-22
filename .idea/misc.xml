@@ -8,11 +8,13 @@
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/activity_dragodinde.xml" value="0.259375" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/activity_initialize.xml" value="0.20520833333333333" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/add_dragodinde_fragment.xml" value="0.33" />
-        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/dragodinde_view_holder.xml" value="0.67" />
+        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/coupling_view_holder.xml" value="0.33" />
+        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/dragodinde_view_holder.xml" value="0.22" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/home_dragodinde_fragment.xml" value="0.259375" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_end_fragment.xml" value="0.20520833333333333" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_home_fragment.xml" value="0.25" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/initializing_setup_fragment.xml" value="0.25" />
+        <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/list_coupling.xml" value="0.25729166666666664" />
         <entry key="..\:/Documents/Android/DragoFus/app/src/main/res/layout/list_dragodinde_fragment.xml" value="0.25" />
       </map>
     </option>

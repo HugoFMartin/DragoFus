@@ -91,4 +91,10 @@
         <string name="add_dragodinde_gestation">Gestation :</string>
         <string name="add_dragodinde_reproduction_placeholder">5</string>
         <string name="add_dragodinde_button">Ajouter la dragodinde à l\'enclos</string>
+
+        <!-- List coupling fragment -->
+        <string name="list_coupling_title">Accouplements</string>
+        <string name="list_coupling_add_button">Réaliser un accouplement</string>
+
+
 </resources>

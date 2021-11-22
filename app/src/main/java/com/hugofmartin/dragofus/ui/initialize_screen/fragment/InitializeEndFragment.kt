@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
+import com.hugofmartin.dragofus.common.FirstRun
 import kotlinx.android.synthetic.main.initializing_end_fragment.*
 
 class InitializeEndFragment : Fragment() {
@@ -23,6 +24,7 @@ class InitializeEndFragment : Fragment() {
 
         go_to_home_button.setOnClickListener {
             findNavController().navigate(R.id.action_initializeEndFragment_to_main_navigation)
+            FirstRun.updateFirstRunKey(requireContext())
         }
 
     }

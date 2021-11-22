@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
+import com.hugofmartin.dragofus.common.FirstRun
 import kotlinx.android.synthetic.main.initializing_home_fragment.*
 
 
@@ -16,6 +17,11 @@ class InitializeHomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.run {
+            if (!FirstRun.isFirstRun(this)){
+                findNavController().navigate(R.id.action_initializeHomeFragment_to_main_navigation)
+            }
+        } ?: throw IllegalStateException("Invalid Activity")
         return inflater.inflate(R.layout.initializing_home_fragment, container, false)
     }
 

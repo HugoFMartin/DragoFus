@@ -9,7 +9,7 @@ data class Coupling(
     val id: Int,
     val maleRace: Race,
     val femaleRace: Race,
-    val childRace: Race,
+    val childRace: Race?,
     var finished: Boolean,
     var couplingDate: String
 )

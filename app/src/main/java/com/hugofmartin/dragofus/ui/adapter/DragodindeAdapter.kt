@@ -1,12 +1,17 @@
 package com.hugofmartin.dragofus.ui.adapter
 
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.BaseAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.hugofmartin.dragofus.R
 import com.hugofmartin.dragofus.data.entity.Dragodinde
 import com.hugofmartin.dragofus.ui.viewholder.DragodindeViewHolder
 
-class DragodindeAdapter: ListAdapter<Dragodinde, DragodindeViewHolder>(Companion) {
+class DragodindeAdapter : ListAdapter<Dragodinde, DragodindeViewHolder>(Companion) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DragodindeViewHolder {

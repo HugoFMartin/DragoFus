@@ -10,6 +10,8 @@ import kotlinx.coroutines.withContext
 
 interface DragodindeRepository {
     val allDragodindes: Flow<List<Dragodinde>>
+    val femaleDragodindes: Flow<List<Dragodinde>>
+    val maleDragodindes: Flow<List<Dragodinde>>
     suspend fun addDragodinde(dragodinde: Dragodinde)
     suspend fun deleteDragodinde(dragodindeId: Dragodinde)
     suspend fun makeUnFertile(dragodindeId: Int)
@@ -30,6 +32,8 @@ class DragondindeRepositoryImpl(
 ) : DragodindeRepository {
 
     override val allDragodindes: Flow<List<Dragodinde>> = dragodindeDao.getAll()
+    override val femaleDragodindes: Flow<List<Dragodinde>> = dragodindeDao.getFemaleDragodindes()
+    override val maleDragodindes: Flow<List<Dragodinde>> = dragodindeDao.getMaleDragodindes()
 
     override suspend fun addDragodinde(dragodinde: Dragodinde) {
         withContext(Dispatchers.IO){
@@ -38,22 +42,32 @@ class DragondindeRepositoryImpl(
     }
 
     override suspend fun deleteDragodinde(dragodindeId: Dragodinde){
-        dragodindeDao.delete(dragodindeId)
+        withContext(Dispatchers.IO) {
+            dragodindeDao.delete(dragodindeId)
+        }
     }
 
     override suspend fun makeUnFertile(dragodindeId: Int) {
-        dragodindeDao.makeUnFertile(dragodindeId)
+        withContext(Dispatchers.IO) {
+            dragodindeDao.makeUnFertile(dragodindeId)
+        }
     }
 
     override suspend fun makeFertile(dragodindeId: Int) {
-        dragodindeDao.makeFertile(dragodindeId)
+        withContext(Dispatchers.IO) {
+            dragodindeDao.makeFertile(dragodindeId)
+        }
     }
 
     override suspend fun makePregnant(femaleDragodindeId: Int) {
-        dragodindeDao.makePregnant(femaleDragodindeId)
+        withContext(Dispatchers.IO) {
+            dragodindeDao.makePregnant(femaleDragodindeId)
+        }
     }
 
     override suspend fun decrementCoupling(dragodindeId: Int) {
-        dragodindeDao.decrementCoupling(dragodindeId)
+        withContext(Dispatchers.IO) {
+            dragodindeDao.decrementCoupling(dragodindeId)
+        }
     }
 }

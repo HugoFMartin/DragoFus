@@ -7,18 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hugofmartin.dragofus.R
-import com.hugofmartin.dragofus.data.entity.Coupling
 import com.hugofmartin.dragofus.ui.adapter.CouplingAdapter
-import kotlinx.android.synthetic.main.home_dragodinde_fragment.*
-import kotlinx.android.synthetic.main.list_coupling.*
+import kotlinx.android.synthetic.main.list_coupling_fragment.*
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
 class ListCouplingFragment : Fragment() {
 
     private lateinit var listCouplingAdapter: CouplingAdapter
-    private lateinit var couplingViewModel: ListCouplingViewModel
+    private lateinit var listCouplingViewModel: ListCouplingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,16 +27,20 @@ class ListCouplingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         activity?.run {
-            couplingViewModel = ViewModelProvider(this, ListCouplingViewModel).get(
+            listCouplingViewModel = ViewModelProvider(this, ListCouplingViewModel).get(
                 ListCouplingViewModel::class.java
             )
         } ?: throw IllegalStateException("Invalid Activity")
 
 
-        return inflater.inflate(R.layout.list_coupling, container, false)
+        return inflater.inflate(R.layout.list_coupling_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        go_to_add_coupling_button.setOnClickListener {
+            findNavController().navigate(R.id.action_listCouplingFragment_to_addCouplingFragment)
+        }
 
         listCouplingAdapter = CouplingAdapter()
         list_coupling_recyclerView.apply {
@@ -44,8 +49,12 @@ class ListCouplingFragment : Fragment() {
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
-            val couplingList = couplingViewModel.getCouplings() as MutableList<Coupling>
-            listCouplingAdapter.submitList(couplingList)
+            listCouplingViewModel.getCouplings()
+                .onEach {
+                    listCouplingAdapter.submitList(it)
+                    listCouplingAdapter.notifyDataSetChanged()
+                }
+                .launchIn(this)
         }
 
     }

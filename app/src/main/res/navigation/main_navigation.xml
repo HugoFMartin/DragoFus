@@ -37,5 +37,13 @@
     <fragment
         android:id="@+id/listCouplingFragment"
         android:name="com.hugofmartin.dragofus.ui.main_screen.list_coupling.ListCouplingFragment"
-        android:label="ListCouplingFragment" />
+        android:label="ListCouplingFragment" >
+        <action
+            android:id="@+id/action_listCouplingFragment_to_addCouplingFragment"
+            app:destination="@id/addCouplingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCouplingFragment"
+        android:name="com.hugofmartin.dragofus.ui.main_screen.add_coupling.AddCouplingFragment"
+        android:label="AddCouplingFragment" />
 </navigation>

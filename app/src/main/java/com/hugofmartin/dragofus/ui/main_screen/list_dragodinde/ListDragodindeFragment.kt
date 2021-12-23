@@ -55,6 +55,7 @@ class ListDragodindeFragment: Fragment() {
             layoutManager = GridLayoutManager(context, 1)
         }
         dragodindeAdapter.submitList(dragodindeViewModel.listDragodindeState.dragodindes)
+        dragodindeAdapter.notifyDataSetChanged()
 
 
         toggle_filter_constraintLayout.setOnClickListener { 

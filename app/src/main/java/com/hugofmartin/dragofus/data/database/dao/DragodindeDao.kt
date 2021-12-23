@@ -12,6 +12,12 @@ interface DragodindeDao {
     @Query("SELECT * FROM dragodinde")
     fun getAll(): Flow<List<Dragodinde>>
 
+    @Query("SELECT * FROM dragodinde WHERE gender= 'FEMALE'")
+    fun getFemaleDragodindes(): Flow<List<Dragodinde>>
+
+    @Query("SELECT * FROM dragodinde WHERE gender= 'MALE'")
+    fun getMaleDragodindes(): Flow<List<Dragodinde>>
+
     @Query("UPDATE dragodinde SET isFertile= 0 WHERE id= :dragodindeId")
     fun makeUnFertile(dragodindeId: Int)
 

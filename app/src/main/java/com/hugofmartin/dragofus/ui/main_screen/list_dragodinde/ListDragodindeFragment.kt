@@ -1,5 +1,6 @@
 package com.hugofmartin.dragofus.ui.main_screen.list_dragodinde
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,6 +44,9 @@ class ListDragodindeFragment: Fragment() {
                 when(event) {
                     is ListDragodindeEventUI.ToggleFilter -> {
                         filter_constraintLayout.visibility = if (dragodindeViewModel.listDragodindeState.isFilterDragodindeVisible) View.VISIBLE else View.GONE
+                    }
+                    is ListDragodindeEventUI.UpdateDragodindeList -> {
+                        dragodindeAdapter.submitList(dragodindeViewModel.listDragodindeState.dragodindes)
                     }
                 }
             }

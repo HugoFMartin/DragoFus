@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_homeDragodindeFragment_to_listDragodindeFragment"
             app:destination="@id/listDragodindeFragment" />
+        <action
+            android:id="@+id/action_homeDragodindeFragment_to_listCouplingFragment"
+            app:destination="@id/listCouplingFragment" />
     </fragment>
     <fragment
         android:id="@+id/achievementFragment"
@@ -31,4 +34,16 @@
         android:id="@+id/addDragodindeFragment"
         android:name="com.hugofmartin.dragofus.ui.main_screen.add_dragodinde.AddDragodindeFragment"
         android:label="AddDragodindeFragment" />
+    <fragment
+        android:id="@+id/listCouplingFragment"
+        android:name="com.hugofmartin.dragofus.ui.main_screen.list_coupling.ListCouplingFragment"
+        android:label="ListCouplingFragment" >
+        <action
+            android:id="@+id/action_listCouplingFragment_to_addCouplingFragment"
+            app:destination="@id/addCouplingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCouplingFragment"
+        android:name="com.hugofmartin.dragofus.ui.main_screen.add_coupling.AddCouplingFragment"
+        android:label="AddCouplingFragment" />
 </navigation>

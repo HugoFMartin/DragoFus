@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/nb_coupling_reduc"
+            android:text="@string/nb_coupling_desc"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/dragodinde_coupling_nb_textViewHolder" />
 

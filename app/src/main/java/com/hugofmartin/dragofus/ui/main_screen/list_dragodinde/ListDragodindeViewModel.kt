@@ -17,7 +17,7 @@ import kotlinx.coroutines.launch
 
 class ListDragodindeViewModel(
     private val dragodindeRepository: DragodindeRepository
-):ViewModel() {
+) : ViewModel() {
 
     private val _listDragodindeState = ListDragodindeState()
     val listDragodindeState = _listDragodindeState
@@ -31,8 +31,8 @@ class ListDragodindeViewModel(
         getDragodindes()
     }
 
-    fun onEvent(event: ListDragodindeEvent){
-        when(event) {
+    fun onEvent(event: ListDragodindeEvent) {
+        when (event) {
             is ListDragodindeEvent.OnFilter -> {
                 toggleFilter(event.filter)
                 getDragodindes()
@@ -48,7 +48,8 @@ class ListDragodindeViewModel(
                 }
             }
             is ListDragodindeEvent.ToggleDragodindeFilter -> {
-                _listDragodindeState.isFilterDragodindeVisible = !_listDragodindeState.isFilterDragodindeVisible
+                _listDragodindeState.isFilterDragodindeVisible =
+                    !_listDragodindeState.isFilterDragodindeVisible
                 viewModelScope.launch {
                     _eventFlow.emit(ListDragodindeEventUI.ToggleFilter)
                 }
@@ -63,34 +64,43 @@ class ListDragodindeViewModel(
         getDragodindesJob?.cancel()
         getDragodindesJob = dragodindeRepository.allDragodindes
             .onEach { dragodindes ->
+                var filteredDragodindes = dragodindes
                 _listDragodindeState.filters.forEach {
-                    applyFilter(it, dragodindes)
+                    filteredDragodindes = applyFilter(it, dragodindes)
                 }
-                applySort(_listDragodindeState.sorting, dragodindes)
-                _listDragodindeState.dragodindes = dragodindes
+                filteredDragodindes = applySort(_listDragodindeState.sorting, filteredDragodindes)
+                _listDragodindeState.dragodindes = filteredDragodindes
+                _eventFlow.emit(ListDragodindeEventUI.UpdateDragodindeList)
             }
             .launchIn(viewModelScope)
     }
 
-    private fun applyFilter(filter: DragodindeFilter, dragodindes: List<Dragodinde>){
-        when (filter) {
+    private fun applyFilter(
+        filter: DragodindeFilter,
+        dragodindes: List<Dragodinde>
+    ): List<Dragodinde> {
+        return when (filter) {
             is DragodindeFilter.Male -> dragodindes.filter { it.gender == Gender.MALE }
             is DragodindeFilter.Female -> dragodindes.filter { it.gender == Gender.FEMALE }
             is DragodindeFilter.Fertile -> dragodindes.filter { it.isFertile }
-            is DragodindeFilter.Sterile -> dragodindes.filter { !it.isFertile }
+            is DragodindeFilter.NotFertile -> dragodindes.filter { !it.isFertile }
+            is DragodindeFilter.Sterile -> dragodindes.filter { it.nbCoupling == 0 }
             is DragodindeFilter.Pregnant -> dragodindes.filter { it.isPregnant }
-            is DragodindeFilter.NotFertile -> dragodindes.filter { !it.isPregnant }
         }
     }
-    private fun applySort(sorting: DragodindeSort, dragodindes: List<Dragodinde>){
-        when (sorting) {
+
+    private fun applySort(
+        sorting: DragodindeSort,
+        dragodindes: List<Dragodinde>
+    ): List<Dragodinde> {
+        return when (sorting) {
             is DragodindeSort.SortByRace -> dragodindes.sortedByDescending { it.race.name }
             is DragodindeSort.SortByName -> dragodindes.sortedByDescending { it.name }
         }
     }
 
     private fun toggleFilter(filter: DragodindeFilter) {
-        if (_listDragodindeState.filters.contains(filter)) {
+        if (!_listDragodindeState.filters.contains(filter)) {
             _listDragodindeState.filters.add(filter)
         } else {
             _listDragodindeState.filters.remove(filter)

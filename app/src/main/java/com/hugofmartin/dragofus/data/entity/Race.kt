@@ -1004,5 +1004,7 @@ enum class Race{
     companion object {
         fun from(search: String): Race = values().find { it.type == search }!!
         fun from(search: Int): Race = values().find { it.getImage() == search }!!
+        fun getChild(male: Dragodinde, female: Dragodinde): Race? =
+            values().firstOrNull() { it.parents.contains(male.race) && it.parents.contains(female.race) }
     }
 }

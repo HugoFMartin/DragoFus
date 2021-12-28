@@ -28,12 +28,18 @@ class DragodindeViewHolder private constructor(itemView: View) : RecyclerView.Vi
 
             if (model.isPregnant){
                 is_coupling_textViewHolder.visibility = View.VISIBLE
+            } else {
+                is_coupling_textViewHolder.visibility = View.INVISIBLE
             }
             if (model.isFertile) {
                 is_fertile_textViewHolder.visibility = View.VISIBLE
+            }  else {
+                is_fertile_textViewHolder.visibility = View.INVISIBLE
             }
             if(model.nbCoupling == 0) {
                 is_sterile_textViewHolder.visibility = View.VISIBLE
+            }  else {
+                is_sterile_textViewHolder.visibility = View.INVISIBLE
             }
         }
     }

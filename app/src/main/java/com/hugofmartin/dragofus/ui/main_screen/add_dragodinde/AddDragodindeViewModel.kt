@@ -76,6 +76,7 @@ class AddDragodindeViewModel(
                     }
 
                     _addDragodindeStateEventFlow.emit(AddDragodindeUiEvent.OnDragodindeAdded)
+                    _addDragodindeState.reset()
                 }
             }
         }

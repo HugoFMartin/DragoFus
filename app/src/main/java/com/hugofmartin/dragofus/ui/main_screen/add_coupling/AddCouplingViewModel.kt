@@ -9,6 +9,8 @@ import com.hugofmartin.dragofus.data.entity.Race
 import com.hugofmartin.dragofus.data.repository.CouplingRepository
 import com.hugofmartin.dragofus.data.repository.DragodindeRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -17,28 +19,39 @@ class AddCouplingViewModel(
     private val dragodindeRepository: DragodindeRepository
 ) : ViewModel() {
 
-    fun getMaleDragodindes() : Flow<List<Dragodinde>>{
+    private val _eventFlow = MutableSharedFlow<AddCouplingEvent>()
+    val eventFlow = _eventFlow.asSharedFlow()
+
+    fun getMaleDragodindes(): Flow<List<Dragodinde>> {
         return dragodindeRepository.maleDragodindes
     }
 
-    fun getFemaleDragodindes() : Flow<List<Dragodinde>>{
+    fun getFemaleDragodindes(): Flow<List<Dragodinde>> {
         return dragodindeRepository.femaleDragodindes
     }
 
     fun makeCoupling(male: Dragodinde, female: Dragodinde) {
         viewModelScope.launch {
-            val newCoupling = Coupling(0, male.race, female.race, Race.getChild(male,female),false, Date().toString())
+            val newCoupling = Coupling(
+                0,
+                male.race,
+                female.race,
+                Race.getChild(male, female),
+                false,
+                Date().toString()
+            )
             couplingRepository.addCoupling(newCoupling)
-            onDragodindeCoupling(male,female)
+            onDragodindeCoupling(male, female)
         }
     }
 
-    private suspend fun onDragodindeCoupling(male : Dragodinde, female: Dragodinde){
-            dragodindeRepository.makePregnant(female.id)
-            dragodindeRepository.makeUnFertile(male.id)
-            dragodindeRepository.makeUnFertile(female.id)
-            dragodindeRepository.decrementCoupling(male.id)
-            dragodindeRepository.decrementCoupling(female.id)
+    private suspend fun onDragodindeCoupling(male: Dragodinde, female: Dragodinde) {
+        dragodindeRepository.makePregnant(female.id)
+        dragodindeRepository.makeUnFertile(male.id)
+        dragodindeRepository.makeUnFertile(female.id)
+        dragodindeRepository.decrementCoupling(male.id)
+        dragodindeRepository.decrementCoupling(female.id)
+        _eventFlow.emit(AddCouplingEvent.OnCouplingAdded)
     }
 
     companion object Factory : ViewModelProvider.Factory {

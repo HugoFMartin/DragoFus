@@ -9,9 +9,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
 import com.hugofmartin.dragofus.data.entity.Dragodinde
+import com.hugofmartin.dragofus.ui.main_screen.add_dragodinde.AddDragodindeUiEvent
 import kotlinx.android.synthetic.main.add_coupling_fragment.*
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -54,7 +57,6 @@ class AddCouplingFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             addCouplingViewModel.getFemaleDragodindes()
                 .onEach {
-                    Log.d("MON flow", it.toString())
                     femaleDragodindeAdapter.submitList(it)
                     femaleDragodindeAdapter.notifyDataSetChanged()
                 }
@@ -65,6 +67,14 @@ class AddCouplingFragment : Fragment() {
                     maleDragodindeAdapter.notifyDataSetChanged()
                 }
                 .launchIn(this)
+
+            addCouplingViewModel.eventFlow.collectLatest {
+                when(it) {
+                    is AddCouplingEvent.OnCouplingAdded -> {
+                        findNavController().popBackStack()
+                    }
+                }
+            }
         }
 
         add_coupling_button.setOnClickListener {

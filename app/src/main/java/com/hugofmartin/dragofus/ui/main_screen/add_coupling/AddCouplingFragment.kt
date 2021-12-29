@@ -2,7 +2,6 @@ package com.hugofmartin.dragofus.ui.main_screen.add_coupling
 
 import DragodindeCouplingAdapter
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.hugofmartin.dragofus.R
 import com.hugofmartin.dragofus.data.entity.Dragodinde
-import com.hugofmartin.dragofus.ui.main_screen.add_dragodinde.AddDragodindeUiEvent
 import kotlinx.android.synthetic.main.add_coupling_fragment.*
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.launchIn
@@ -69,7 +67,7 @@ class AddCouplingFragment : Fragment() {
                 .launchIn(this)
 
             addCouplingViewModel.eventFlow.collectLatest {
-                when(it) {
+                when (it) {
                     is AddCouplingEvent.OnCouplingAdded -> {
                         findNavController().popBackStack()
                     }
@@ -80,8 +78,8 @@ class AddCouplingFragment : Fragment() {
         add_coupling_button.setOnClickListener {
             addCouplingViewModel.makeCoupling(
                 maleDragodindeAdapter.getItem(dragodinde_male_spinner.selectedItemPosition) as Dragodinde,
-                femaleDragodindeAdapter.getItem(dragodinde_female_spinner.selectedItemPosition) as Dragodinde
-
+                femaleDragodindeAdapter.getItem(dragodinde_female_spinner.selectedItemPosition) as Dragodinde,
+                requireContext()
             )
         }
 

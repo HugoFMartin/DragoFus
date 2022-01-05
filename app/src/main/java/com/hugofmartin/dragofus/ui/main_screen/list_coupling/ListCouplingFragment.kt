@@ -42,6 +42,10 @@ class ListCouplingFragment : Fragment() {
             findNavController().navigate(R.id.action_listCouplingFragment_to_addCouplingFragment)
         }
 
+        add_coupling_from_list_button.setOnClickListener {
+            findNavController().navigate(R.id.action_listCouplingFragment_to_addCouplingFragment)
+        }
+
         listCouplingAdapter = CouplingAdapter()
         list_coupling_recyclerView.apply {
             adapter = listCouplingAdapter
@@ -51,11 +55,20 @@ class ListCouplingFragment : Fragment() {
         viewLifecycleOwner.lifecycleScope.launch {
             listCouplingViewModel.getCouplings()
                 .onEach {
-                    listCouplingAdapter.submitList(it)
-                    listCouplingAdapter.notifyDataSetChanged()
+                    if (it.isEmpty()) {
+                        showEmptyCouplingLayout()
+                    } else {
+                        listCouplingAdapter.submitList(it)
+                        listCouplingAdapter.notifyDataSetChanged()
+                    }
                 }
                 .launchIn(this)
         }
 
+    }
+
+    private fun showEmptyCouplingLayout(){
+        has_no_coupling.visibility = View.VISIBLE
+        has_coupling.visibility = View.GONE
     }
 }

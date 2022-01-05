@@ -45,5 +45,9 @@
     <fragment
         android:id="@+id/addCouplingFragment"
         android:name="com.hugofmartin.dragofus.ui.main_screen.add_coupling.AddCouplingFragment"
-        android:label="AddCouplingFragment" />
+        android:label="AddCouplingFragment" >
+        <action
+            android:id="@+id/action_addCouplingFragment_to_listDragodindeFragment"
+            app:destination="@id/listDragodindeFragment" />
+    </fragment>
 </navigation>

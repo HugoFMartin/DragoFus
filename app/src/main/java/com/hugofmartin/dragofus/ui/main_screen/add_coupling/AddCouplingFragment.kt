@@ -52,17 +52,30 @@ class AddCouplingFragment : Fragment() {
             adapter = femaleDragodindeAdapter
         }
 
+        add_dragodinde_from_coupling_button.setOnClickListener {
+            findNavController().navigate(R.id.action_addCouplingFragment_to_listDragodindeFragment)
+        }
+
         viewLifecycleOwner.lifecycleScope.launch {
             addCouplingViewModel.getFemaleDragodindes()
                 .onEach {
-                    femaleDragodindeAdapter.submitList(it)
-                    femaleDragodindeAdapter.notifyDataSetChanged()
+                    if(it.isEmpty()){
+                        showEmptyDragodindeLayout()
+                    } else {
+                        femaleDragodindeAdapter.submitList(it)
+                        femaleDragodindeAdapter.notifyDataSetChanged()
+                    }
                 }
                 .launchIn(this)
+
             addCouplingViewModel.getMaleDragodindes()
                 .onEach {
-                    maleDragodindeAdapter.submitList(it)
-                    maleDragodindeAdapter.notifyDataSetChanged()
+                    if (it.isEmpty()) {
+                        showEmptyDragodindeLayout()
+                    } else {
+                        maleDragodindeAdapter.submitList(it)
+                        maleDragodindeAdapter.notifyDataSetChanged()
+                    }
                 }
                 .launchIn(this)
 
@@ -82,7 +95,10 @@ class AddCouplingFragment : Fragment() {
                 requireContext()
             )
         }
+    }
 
-
+    private fun showEmptyDragodindeLayout(){
+        has_no_dragodinde.visibility = View.VISIBLE
+        has_dragodinde.visibility = View.GONE
     }
 }

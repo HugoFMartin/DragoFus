@@ -70,6 +70,8 @@
         <string name="sort">Trier par :</string>
         <string name="name_radio_button">Nom</string>
         <string name="race_radio_button">Génération</string>
+        <string name="no_dragodinde_from_list">Vous n\'avez pas encore de dragodinde</string>
+        <string name="go_to_add_dragodinde_from_list">Ajouter une dragodinde</string>
 
         <!-- Dragodinde view holder -->
         <string name="nb_coupling_desc">Accoup… : </string>
@@ -95,6 +97,14 @@
         <!-- List coupling fragment -->
         <string name="list_coupling_title">Accouplements</string>
         <string name="list_coupling_add_button">Réaliser un accouplement</string>
+        <string name="no_coupling_from_list">Vous n\'avez actuellement aucun accouplement</string>
+        <string name="go_to_add_coupling_from_list">Ajouter un accouplement</string>
+
+        <!-- Add coupling fragment -->
+        <string name="female_dragodinde_drop_list">Dragodindes femelles</string>
+        <string name="male_dragodinde_drop_list">Dragodindes male</string>
+        <string name="no_dragodinde_from_coupling">Vous n\'avez actuellement aucune dragodinde féconde</string>
+        <string name="go_to_add_dragodinde_from_coupling">Ajouter des dragodindes</string>
 
 
 </resources>

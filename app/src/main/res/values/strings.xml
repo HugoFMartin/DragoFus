@@ -4,6 +4,8 @@
     <string name="yes">Oui</string>
     <string name="no">Non</string>
     <string name="validate">Valider</string>
+    <string name="start">Commencer</string>
+    <string name="next">Continuer</string>
 
     <!-- Initialize screen -->
         <!-- Initializing home fragment -->
@@ -17,7 +19,7 @@
             du MMORPG Dofus !
         </string>
         <string name="initializing_home_subcontent">
-            Afin de paramétrer l\'application, as tu déjà commencé les succès d\'élevage sur le jeu ?
+            Afin de paramétrer l\'application tu devras renseigner ton avancement sur les succès d\'élevages
         </string>
 
         <!-- Initializing setup fragment -->
@@ -28,7 +30,7 @@
         <string name="initializing_setup_edit_hint">0</string>
 
         <!-- Initializing end fragment -->
-        <string name="initializing_end_title">DragoFus</string>
+        <string name="initializing_end_title">Terminé !</string>
         <string name="initializing_end_content">L\'appication est prête à l\'utilisation !</string>
         <string name="initializing_end_button">C\'est parti !</string>
 

@@ -64,10 +64,15 @@ class ListDragodindeViewModel(
         getDragodindesJob?.cancel()
         getDragodindesJob = dragodindeRepository.allDragodindes
             .onEach { dragodindes ->
-                var filteredDragodindes = dragodindes
+                // Create a list to stock the filter
+                var filteredDragodindes = listOf<Dragodinde>()
+                // Apply the filter
                 _listDragodindeState.filters.forEach {
-                    filteredDragodindes = applyFilter(it, dragodindes)
+                    filteredDragodindes = listOf(applyFilter(it, dragodindes),filteredDragodindes).flatten()
                 }
+                // If the filteredList is empty, means there is no filters, use the list returned by DB
+                if (filteredDragodindes.isEmpty()) filteredDragodindes = dragodindes
+                // Apply the sorting
                 filteredDragodindes = applySort(_listDragodindeState.sorting, filteredDragodindes)
                 _listDragodindeState.dragodindes = filteredDragodindes
                 _eventFlow.emit(ListDragodindeEventUI.UpdateDragodindeList)

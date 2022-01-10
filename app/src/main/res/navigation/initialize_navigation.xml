@@ -12,9 +12,6 @@
             android:id="@+id/action_initializeHomeFragment_to_initializeSetupFragment"
             app:destination="@id/initializeSetupFragment" />
         <action
-            android:id="@+id/action_initializeHomeFragment_to_initializeEndFragment"
-            app:destination="@id/initializeEndFragment" />
-        <action
             android:id="@+id/action_initializeHomeFragment_to_main_navigation"
             app:destination="@id/main_navigation" />
     </fragment>

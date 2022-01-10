@@ -31,10 +31,5 @@ class InitializeHomeFragment : Fragment() {
         go_to_initializing_setup_button.setOnClickListener{
             findNavController().navigate(R.id.action_initializeHomeFragment_to_initializeSetupFragment)
         }
-
-        go_to_initializing_end_button.setOnClickListener{
-            findNavController().navigate(R.id.action_initializeHomeFragment_to_initializeEndFragment)
-        }
-
     }
 }

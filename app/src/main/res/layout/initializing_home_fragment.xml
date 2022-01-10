@@ -71,8 +71,8 @@
 
     <ImageView
         android:id="@+id/home_initializing_imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toTopOf="@+id/home_initializing_subcontent_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,24 +94,10 @@
 
     <Button
         android:id="@+id/go_to_initializing_setup_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_margin="16dp"
-        android:text="@string/yes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/go_to_initializing_end_button"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/go_to_initializing_end_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_margin="16dp"
-        android:text="@string/no"
+        style="@style/bottom_button_fragment"
+        android:text="@string/start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/go_to_initializing_setup_button" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

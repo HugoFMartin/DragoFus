@@ -11,12 +11,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.hugofmartin.dragofus.R
 import com.hugofmartin.dragofus.common.DragodindeFilter
+import com.hugofmartin.dragofus.data.entity.Dragodinde
 import com.hugofmartin.dragofus.ui.adapter.DragodindeAdapter
+import com.hugofmartin.dragofus.ui.viewholder.OnDragodindeClickListener
 import kotlinx.android.synthetic.main.list_dragodinde_fragment.*
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class ListDragodindeFragment : Fragment() {
+class ListDragodindeFragment : Fragment(), OnDragodindeClickListener {
 
     private lateinit var dragodindeViewModel: ListDragodindeViewModel
     private lateinit var dragodindeAdapter: DragodindeAdapter
@@ -57,7 +59,7 @@ class ListDragodindeFragment : Fragment() {
             }
         }
 
-        dragodindeAdapter = DragodindeAdapter()
+        dragodindeAdapter = DragodindeAdapter(this)
 
         dragodinde_list_recyclerView.apply {
             adapter = dragodindeAdapter
@@ -100,5 +102,9 @@ class ListDragodindeFragment : Fragment() {
     private fun showEmptyDragodindeLayout() {
         has_no_dragodinde.visibility = View.VISIBLE
         has_dragodinde.visibility = View.GONE
+    }
+
+    override fun invoke(view: View, dragodinde: Dragodinde) {
+        dragodindeViewModel.onEvent(ListDragodindeEvent.DeleteDragodinde(dragodinde))
     }
 }

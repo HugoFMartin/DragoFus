@@ -76,7 +76,7 @@
         <string name="go_to_add_dragodinde_from_list">Ajouter une dragodinde</string>
 
         <!-- Dragodinde view holder -->
-        <string name="nb_coupling_desc">Accoup… : </string>
+        <string name="nb_coupling_desc">Accouplements : </string>
         <string name="nb_coupling_view_holder"> %1$s /5</string>
         <string name="is_pregnant_view_holder"> Dragodinde fécondée</string>
         <string name="is_fertile_view_holder"> Dragodinde féconde</string>
